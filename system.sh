@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOTFS_NAME="rootfs-alpine.tar.gz"
-DEVICE_NAME="pico-mini-b"
+DEVICE_NAME="pico-pro-max-alpine"
 
 while getopts ":f:d:" opt; do
   case ${opt} in
@@ -19,6 +19,7 @@ case $DEVICE_NAME in
   pico-mini-b) DEVICE_ID="6" ;;
   pico-plus) DEVICE_ID="7" ;;
   pico-pro-max) DEVICE_ID="8" ;;
+  pico-pro-max-alpine) DEVICE_ID="11\n16" ;;
   *)
     echo "Invalid device: ${DEVICE_NAME}."
     exit 1
