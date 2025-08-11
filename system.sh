@@ -37,7 +37,7 @@ source env_install_toolchain.sh
 popd || exit
 
 rm -rf .BoardConfig.mk
-echo "$DEVICE_ID" | ./build.sh lunch
+echo -e "$DEVICE_ID" | ./build.sh lunch
 echo "export RK_CUSTOM_ROOTFS=../sysdrv/custom_rootfs/$ROOTFS_NAME" >> .BoardConfig.mk
 echo "export RK_BOOTARGS_CMA_SIZE=\"1M\"" >> .BoardConfig.mk
 
