@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux
+
 ROOTFS_NAME="rootfs-alpine.tar.gz"
 DEVICE_NAME="pico-pro-max-alpine"
 
