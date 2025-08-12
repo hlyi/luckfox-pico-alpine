@@ -35,8 +35,7 @@ cp "$ROOTFS_NAME" sdk/sysdrv/custom_rootfs/
 pushd sdk || exit
 
 pushd tools/linux/toolchain/arm-rockchip830-linux-uclibcgnueabihf/ || exit
-set --
-source env_install_toolchain.sh
+source env_install_toolchain.sh ""
 popd || exit
 
 rm -rf .BoardConfig.mk
