@@ -34,9 +34,7 @@ cp "$ROOTFS_NAME" sdk/sysdrv/custom_rootfs/
 
 pushd sdk || exit
 
-pushd tools/linux/toolchain/arm-rockchip830-linux-uclibcgnueabihf/ || exit
-source env_install_toolchain.sh ""
-popd || exit
+source tools/linux/toolchain/arm-rockchip830-linux-uclibcgnueabihf/env_install_toolchain.sh ""
 
 rm -rf .BoardConfig.mk
 echo -e "$DEVICE_ID" | ./build.sh lunch
@@ -47,6 +45,7 @@ echo -e "$DEVICE_ID" | ./build.sh lunch
 ./build.sh uboot
 ./build.sh kernel
 ./build.sh driver
+./build.sh rootfs
 ./build.sh env
 #./build.sh app
 # package firmware
